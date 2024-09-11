@@ -18,7 +18,7 @@ def index():
     conn.close()
     return render_template('index.html', expenses=expenses)
 
-# Add Expenses Route
+# Add expense Route
 @app.route('/add', methods=['GET', 'POST'])
 def add_expense():
     if request.method == 'POST':
@@ -34,7 +34,7 @@ def add_expense():
         conn.close()
 
         return redirect(url_for('index'))
-    return render_template('add_expenses.html')
+    return render_template('add_expense.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
