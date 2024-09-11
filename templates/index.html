@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <a href="{{ url_for('add_expense') }}">Add New Expense</a>
     <h2>All Expenses</h2>
     <table>
         <tr>
@@ -19,4 +18,5 @@
         </tr>
         {% endfor %}
     </table>
+    <a href="{{ url_for('add_expense') }}">Add New Expense</a>
 {% endblock %}
